@@ -1,10 +1,64 @@
 //MODULE ASSIGNMENT 2 - LEVEL 1
 
 1. What is a function literal?
+    A function literal is what a Javascript(JS) function object is made of.
+    A function literal consists of four parts, some of which is optional.
+    
+    The first and most important part is the word "function", This is a reserved word in JS.
+    The second part is the function name. function names are optional. A function without a name is called an anonymous function.
+    
+                function with name:                           function without name:
+                function name(){                              function (){
+
+                }                                             }
+                
+    The third part is a set of parameters. A function can have zero or as many parameters you want. It all depends on you.
+    the parameters of a function can be found inside the parentheses separated by commas.
+    
+                function with parameters:                     function without parameters:
+                function name(a, b, c){                              function (){
+
+                }                                             }
+                
+   The fourth and last part is a set of statements inside the curly braces.
+   
+                function with statement:                     
+                function name(a, b, c){      
+                    return a + b - c;
+                }                                            
 
 2. What is the constructor?
+   A constructor is like a regular function. The difference being that we use them with the "new" keyword.
+   There are two types of constructores, custom and built-in. built-in constructors: Object(), String(), 
+   Number(), Boolean(), Array(), RegExp(), Function(), Date().
+   Custom constructors define properties of your own objects.
+   It is common practise to capitalize the function name when making a custom constructor.
+   
+   A constructor is useful when you want to make many similar objects with the same properties in JS.
+   An great example of when a constructor is useful is if you are to make an object with multiple properties, for multiple persons; And everyone has different
+   values. 
+   
+   Then one constructor could be made once, And used with the "new" keyword as many times you want.
+   example:
+   THIS IS A CUSTOM CONSTRUCTOR.
+   function Person(first, last, age, gender, interests){
+        this.name = {
+                first,
+                last
+        };
+        this.age = age;
+        this.gender = gender;
+        this.interests = interests;
+   };
+   
+   THIS IS A NEW PERSON/USER
+   var user1 = new Person ("Agent", "Smith", "42", "Male", "Computer science and Robotics");
+   
+   
 
 3. What does the return statement do?
+    The return statement stops the function and returns a value to the function caller. 
+    Anything inside a function beneath a return statement will never be executed.
 
 4. What will be written to the console from this function:
 		function myFunction(){
@@ -12,6 +66,15 @@
 			  console.log('My name is Andy');
 		}
 		myFunction();
+        
+   The console will write "inside my function"
+   the reason for this is that anything after the return statement is ignored.
 
 
 5. Briefly describe scope in JavaScript.
+    There are two types of scope in JS, Global and Local scope. 
+    Global scope is defined outside of functions. it is accessible from anywhere within the code. 
+    Local scope variables are variables defined inside a function. they are only accessible to the function or functions within the function.
+    
+    There is a way to make a global scope variable inside a function. but It is not recommended. The way to do this is to simply not use the "var" keyword in front of the variable name. 
+
