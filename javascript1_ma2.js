@@ -21,7 +21,7 @@ Person.prototype = {
 
 console.log(Person);
 
-let pOne = new Person ("Joachim", "Skog", 28, "Male", "Gaming")
+var pOne = new Person ("Joachim", "Skog", 28, "Male", "Gaming")
 pOne.nationality = "English";
 pOne.phone = "+47 47605059";
 
@@ -110,6 +110,5 @@ var myDate = function () {
     console.log("YEAR: " + newDate.getFullYear() + " MONTH: "+month[newDate.getMonth()] + " DAY: "+newDate.getDate());
     console.log("MONTH AS NUMBER: "+ (newDate.getMonth()+1));
 }();
-
 
 
